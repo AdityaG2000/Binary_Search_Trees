@@ -338,7 +338,7 @@ template<class ItemType>
 int BST_312 <ItemType>::countNodes(TreeNode* t) const
 {
     if (t == NULL) {
-        return (0); //exit condition for current node being null
+        return (0); //exit condition for current TREE being null
     } else {
         return (1 + countNodes(t->left) + countNodes(t->right)); //recursive call. Sums nodes at left then right. Plus one for account for current node
     }
@@ -357,9 +357,9 @@ void BST_312 <ItemType>::preOrderTraversal(TreeNode* t,vector<ItemType>& result)
     if (t == NULL) {
         return;
     } else {
-        result.push_back(t->data);
-        preOrderTraversal(t->left, result);
-        preOrderTraversal(t->right, result);
+        result.push_back(t->data); //Root
+        preOrderTraversal(t->left, result); //Left
+        preOrderTraversal(t->right, result); //Right
     }
 }
 
@@ -378,9 +378,9 @@ void BST_312 <ItemType>::inOrderTraversal(TreeNode* t,vector<ItemType>& result) 
     if (t == NULL) {
         return;
     } else{
-        inOrderTraversal(t -> left, result);
-        result.push_back(t -> data);
-        inOrderTraversal(t -> right, result);
+        inOrderTraversal(t -> left, result); //Left
+        result.push_back(t -> data); //Root
+        inOrderTraversal(t -> right, result); //Right
     }
 }
 
@@ -398,9 +398,9 @@ void BST_312 <ItemType>::postOrderTraversal(TreeNode* t,vector<ItemType>& result
     if (t == NULL) {
         return;
     } else {
-        postOrderTraversal(t -> left, result);
-        postOrderTraversal(t -> right, result);
-        result.push_back(t -> data);
+        postOrderTraversal(t -> left, result); //Left
+        postOrderTraversal(t -> right, result); //Right
+        result.push_back(t -> data); /Root
     }
 }
 
