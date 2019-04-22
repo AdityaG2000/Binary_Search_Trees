@@ -400,7 +400,7 @@ void BST_312 <ItemType>::postOrderTraversal(TreeNode* t,vector<ItemType>& result
     } else {
         postOrderTraversal(t -> left, result); //Left
         postOrderTraversal(t -> right, result); //Right
-        result.push_back(t -> data); /Root
+        result.push_back(t -> data); //Root
     }
 }
 
