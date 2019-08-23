@@ -9,4 +9,4 @@ Steps:
 4. to run do ./bst to run the simulation. Make sure first that input is in a file such as test.txt. 
 5. output is printed to console
 
-Github Link: https://github.com/AdityaG2000/prog07_ag68834 
+Github Link: https://github.com/AdityaG2000/Binary_Search_Trees
